@@ -1,7 +1,13 @@
 const DEFAULT_LOCAL_API_URL = 'http://localhost:4000/tasks'
-const API_URL = import.meta.env.VITE_API_URL || DEFAULT_LOCAL_API_URL
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? DEFAULT_LOCAL_API_URL : '')
 
 async function request(url, options = {}) {
+  if (!url) {
+    throw new Error(
+      'Missing API URL. Set VITE_API_URL for production builds before deploying.',
+    )
+  }
+
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',

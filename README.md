@@ -104,6 +104,9 @@ npm run preview
 
 The frontend reads the API endpoint from `VITE_API_URL`.
 
+- In development, if `VITE_API_URL` is missing, the app falls back to `http://localhost:4000/tasks`.
+- In production, the app does **not** fall back to localhost. You must provide `VITE_API_URL`.
+
 Local development:
 
 ```env
@@ -134,7 +137,7 @@ To make production work:
 
 1. Deploy your API somewhere public.
 2. Set `VITE_API_URL` in Netlify to that public `/tasks` endpoint.
-3. Trigger a new Netlify deploy.
+3. Trigger a new Netlify deploy so Vite rebuilds with the new environment variable.
 
 Examples of where you can host the mock API:
 
