@@ -1,0 +1,103 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Draft onboarding checklist",
+      "description": "Outline the first-week setup tasks for new team members.",
+      "column": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "title": "Refine dashboard copy",
+      "description": "Tighten empty states and helper text for the project overview page.",
+      "column": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "id": "3",
+      "title": "Prepare sprint goals",
+      "description": "Collect priorities from product and convert them into sprint goals.",
+      "column": "review",
+      "priority": "high"
+    },
+    {
+      "id": "4",
+      "title": "Research analytics events",
+      "description": "List the events we need to track before the reporting release.",
+      "column": "backlog",
+      "priority": "medium"
+    },
+    {
+      "id": "5",
+      "title": "Implement task filters",
+      "description": "Add quick filters for priority and ownership to the task page.",
+      "column": "review",
+      "priority": "high"
+    },
+    {
+      "id": "6",
+      "title": "Review API error handling",
+      "description": "Make sure failed requests show useful inline feedback to users.",
+      "column": "backlog",
+      "priority": "medium"
+    },
+    {
+      "id": "7",
+      "title": "Polish mobile spacing",
+      "description": "Reduce card padding and tune column spacing for smaller laptops.",
+      "column": "review",
+      "priority": "low"
+    },
+    {
+      "id": "8",
+      "title": "Add keyboard shortcuts note",
+      "description": "Document create, edit, and navigation shortcuts in the help drawer.",
+      "column": "done",
+      "priority": "low"
+    },
+    {
+      "id": "9",
+      "title": "Validate delete flow",
+      "description": "Confirm destructive actions always prompt before removing data.",
+      "column": "done",
+      "priority": "high"
+    },
+    {
+      "id": "10",
+      "title": "Check loading skeleton timing",
+      "description": "Review whether the loading state feels stable during fast refreshes.",
+      "column": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "id": "11",
+      "title": "Ship kanban foundation",
+      "description": "Baseline board layout is merged and ready for incremental improvements.",
+      "column": "done",
+      "priority": "low"
+    },
+    {
+      "id": "12",
+      "title": "Set up mock API",
+      "description": "json-server endpoint is running locally for development and demos.",
+      "column": "done",
+      "priority": "medium"
+    },
+    {
+      "id": "13",
+      "title": "Connect React Query cache",
+      "description": "Core task fetching and cache invalidation are working end-to-end.",
+      "column": "done",
+      "priority": "low"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "column": "backlog",
+      "priority": "medium",
+      "id": "hRswwhfxVkM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
