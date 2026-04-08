@@ -45,6 +45,18 @@ Install dependencies:
 npm install
 ```
 
+Create a local environment file:
+
+```bash
+cp .env.example .env
+```
+
+If you are on Windows PowerShell, create `.env` manually and add:
+
+```env
+VITE_API_URL=http://localhost:4000/tasks
+```
+
 ## Available Scripts
 
 Start the Vite development server:
@@ -88,6 +100,22 @@ npm run preview
 - App: `http://localhost:5173`
 - Mock API: `http://localhost:4000/tasks`
 
+## Environment Variables
+
+The frontend reads the API endpoint from `VITE_API_URL`.
+
+Local development:
+
+```env
+VITE_API_URL=http://localhost:4000/tasks
+```
+
+Production:
+
+```env
+VITE_API_URL=https://your-deployed-api.example.com/tasks
+```
+
 ## Mock API Notes
 
 - The project uses `json-server` v1 syntax through:
@@ -97,6 +125,25 @@ json-server db.json --port 4000
 ```
 
 - If you change `db.json` while the server is already running, restart `npm run server` or `npm run dev:all` if the new data is not reflected immediately.
+
+## Netlify Deployment
+
+Netlify only deploys your frontend. It cannot access your local `http://localhost:4000` after deployment, because `localhost` on Netlify points to Netlify's own environment, not your machine.
+
+To make production work:
+
+1. Deploy your API somewhere public.
+2. Set `VITE_API_URL` in Netlify to that public `/tasks` endpoint.
+3. Trigger a new Netlify deploy.
+
+Examples of where you can host the mock API:
+
+- Render
+- Railway
+- Glitch
+- A small Express/json-server service on your own server
+
+If you keep using `json-server`, production needs a hosted version of it or another real backend. Without that, create/update/delete cannot work on Netlify.
 
 ## Project Structure
 

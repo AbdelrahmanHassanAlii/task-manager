@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:4000/tasks'
+const DEFAULT_LOCAL_API_URL = 'http://localhost:4000/tasks'
+const API_URL = import.meta.env.VITE_API_URL || DEFAULT_LOCAL_API_URL
 
 async function request(url, options = {}) {
   const response = await fetch(url, {
